@@ -283,7 +283,7 @@
 
 .form-wrapper .form-create-account .form-body .input-box .mail-svg {
   position: absolute;
-  content: url(../../img/form-create-account-SVG/form_email.svg);
+  content: url(../img/form-create-account-SVG/form_email.svg);
   width: 18px;
   height: 18px;
   top: 50%;
@@ -295,7 +295,7 @@
 
 .form-wrapper .form-create-account .form-body .input-box .lock-svg {
   position: absolute;
-  content: url(../../img/form-create-account-SVG/form_padlock.svg);
+  content: url(../img/form-create-account-SVG/form_padlock.svg);
   width: 18px;
   height: 18px;
   top: 50%;
@@ -307,7 +307,7 @@
 
 .form-wrapper .form-create-account .form-body .input-box .eye-secret-svg {
   position: absolute;
-  content: url(../../img/form-create-account-SVG/form_eye.svg);
+  content: url(../img/form-create-account-SVG/form_eye.svg);
   width: 20px;
   height: 20px;
   top: 50%;

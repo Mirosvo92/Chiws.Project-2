@@ -6,7 +6,7 @@ let path = {
         html: project_folder + '/',
         css: project_folder + '/css/',
         js: project_folder + '/js/',
-        img: project_folder + '/img/**/*',
+        img: project_folder + '/img/',
     },
     src: {
         html: source_folder + '/index.html',
