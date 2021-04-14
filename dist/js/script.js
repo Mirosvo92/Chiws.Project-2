@@ -13,9 +13,10 @@ const spanNameError = document.getElementById('name-error');
 const spanPasswordError = document.getElementById('password-error');
 const spanCountryError = document.getElementById('country-error');
 
+const formBox = document.querySelector('.form-box');
+
 const addClassError = (input, span) => {
     input.classList.add('error');
-
     span.classList.add('active');
     buttonSendForm.classList.add('active');
 };
@@ -26,49 +27,52 @@ const removeClassError = (input, span) => {
     buttonSendForm.classList.remove('active');
 };
 
-const checkName = (login) => {
-    if (login.value === '') {
-        addClassError(login, spanNameError);
-    } else if (login.value.length >= 2) {
-        removeClassError(login, spanNameError);
+const checkName = (login, spanError) => {
+    let nameTrim = login.value.trim();
+
+    if (nameTrim === '') {
+        addClassError(login, spanError);
+    } else if (nameTrim.length >= 3) {
+        removeClassError(login, spanError);
     }
 };
 
-const checkPassword = (password) => {
-    if (password.value.length <= 6) {
-        addClassError(password, spanPasswordError);
-    } else if (password.value.length > 6) {
-        removeClassError(password, spanPasswordError);
+const checkPassword = (password, spanError) => {
+    let passwordTrim = password.value.trim();
+
+    if (passwordTrim.length <= 6) {
+        addClassError(password, spanError);
+    } else if (passwordTrim.length > 6) {
+        removeClassError(password, spanError);
     }
 };
 
-const checkSelect = (select) => {
+const checkSelect = (select, spanError) => {
     let chosen = select.value;
     if (chosen === '') {
-        addClassError(select, spanCountryError);
+        addClassError(select, spanError);
     } else {
-        removeClassError(select, spanCountryError);
-    }
-};
-
-const checkAcceptBox = (checkbox) => {
-    if (checkbox.checked) {
-        console.log('you accept');
-    } else if (checkbox.checked === false) {
-        console.log('you did not accept');
+        removeClassError(select, spanError);
     }
 };
 
 // onsubmit
 // событие change
-// на кнопку довешивается атрибут disabled? если поля пустые
-//
 
 buttonSendForm.addEventListener('click', () => {
-    checkName(inputName);
-    checkPassword(inputPassword);
-    checkSelect(selectCountry);
-    checkAcceptBox(checkBoxAccept);
+    checkName(inputName, spanNameError);
+    checkPassword(inputPassword, spanPasswordError);
+    checkSelect(selectCountry, spanCountryError);
+});
+
+checkBoxAccept.addEventListener('click', () => {
+    buttonSendForm.disabled = !checkBoxAccept.checked;
+});
+
+formBox.addEventListener('change', () => {
+    checkName(inputName, spanNameError);
+    checkPassword(inputPassword, spanPasswordError);
+    checkSelect(selectCountry, spanCountryError);
 });
 
 togglePasswordText.addEventListener('click', () => {

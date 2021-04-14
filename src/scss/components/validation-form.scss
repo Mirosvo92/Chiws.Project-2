@@ -130,8 +130,9 @@
                         background-color: #207dff;
                     }
 
-                    &:active {
-                        border: 1px solid #0050c0;
+                    &:disabled {
+                        background-color: gray;
+                        border: 1px solid gray;
                     }
                 }
 

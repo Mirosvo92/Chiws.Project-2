@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="stylesheet" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;900&display=swap">
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/din-pro-cond">
     <title>Document</title>
 </head>
 
@@ -21,66 +18,70 @@
                 </div>
 
                 <form action="#" class="form-body" id="form">
-                    <div class="input-name-box input-box">
-                        <span class="mail-svg"></span>
-                        <input class="input-name input" type="text" placeholder="login"/>
+                    <div class="form-box">
+                        <div class="input-name-box input-box">
+                            <span class="mail-svg"></span>
+                            <input class="input-name input" type="text" placeholder="login"/>
+                        </div>
+    
+                        <div class="error-box">
+                            <span class="span-error" id="name-error" >Enter your name</span>
+                        </div>
+    
+                        <div class="input-password-box input-box">
+                            <span class="lock-svg"></span>
+                            <input class="input-password input" type="password" placeholder="password">
+                            <span class="eye-secret-svg"></span>
+                        </div>
+    
+                        <div class="error-box">
+                            <span class="span-error" id="password-error" >Too short password</span>
+                        </div>
+    
+                        <div class="input-select-box input-box">
+                            <select class="input-country input" name="select-country">
+                                <option value=""></option>
+                                <option value="ukraine">Ukraine</option>
+                                <option value="belarus">Belarus</option>
+                                <option value="moldova">Moldova</option>
+                                <option value="Kazakhstan">Kazakhstan</option>
+                                <option value="Turkmenistan">Turkmenistan</option>
+                            </select>
+                        </div>
+    
+                        <div class="error-box">
+                            <span class="span-error"  id="country-error" >Enter your country</span>
+                        </div>
+    
+                        <div class="input-gender-box">
+                            <label for="male">
+                                <input class="input-male input-radio" id="male" type="radio" name="gender" checked value="male"/><span>Male</span>
+                            </label>
+                            <label for="female">
+                                <input class="input-female input-radio" id="female" type="radio" name="gender" value="female" /><span>Female</span>
+                            </label>
+                        </div>
                     </div>
 
-                    <div class="error-box">
-                        <span class="span-error" id="name-error" >Enter your name</span>
-                    </div>
-
-                    <div class="input-password-box input-box">
-                        <span class="lock-svg"></span>
-                        <input class="input-password input" type="password" placeholder="password">
-                        <span class="eye-secret-svg"></span>
-                    </div>
-
-                    <div class="error-box">
-                        <span class="span-error" id="password-error" >Too short password</span>
-                    </div>
-
-                    <div class="input-select-box input-box">
-                        <select class="input-country input" name="select-country">
-                            <option value=""></option>
-                            <option value="ukraine">Ukraine</option>
-                            <option value="belarus">Belarus</option>
-                            <option value="moldova">Moldova</option>
-                            <option value="Kazakhstan">Kazakhstan</option>
-                            <option value="Turkmenistan">Turkmenistan</option>
-                        </select>
-                    </div>
-
-                    <div class="error-box">
-                        <span class="span-error"  id="country-error" >Enter your country</span>
-                    </div>
-
-                    <div class="input-gender-box">
-                        <label for="male">
-                            <input class="input-male input-radio" id="male" type="radio" name="gender" checked value="male"/><span>Male</span>
-                        </label>
-                        <label for="female">
-                            <input class="input-female input-radio" id="female" type="radio" name="gender" value="female" /><span>Female</span>
-                        </label>
-                    </div>
                     <div class="input-accept-box">
                         <input type="checkbox" class="checkbox-accept" /> Accept <a class="accept-link" href="#">terms</a> and <a class="accept-link" href="#">conditions</a>
                     </div>
                     <div class="btn-box">
-                        <button class="btn-send-form" type="button">Sign up</button>
+                        <button class="btn-send-form" type="button" disabled>Sign up</button>
                     </div>
                 </form>
 
             </div>
         </div>
-        <div class="choose-lab container ">
+
+        <div class="choose-lab container-choose-lab">
             <div class="breadcrumbs">
-                <ul class="">
-                    <li class="visited"><a href="">My Cart<i class="fas fa-arrow-down"></i></a></li>
-                    <li class="active"><a href="">Choose Lab<i class="fas fa-arrow-down"></i></a></li>
-                    <li><a href="">Rentals Return<i class="fas fa-arrow-down"></i></a></li>
-                    <li><a href="">Checkout<i class="fas fa-arrow-down"></i></a></li>
-                    <li><a href="">Order Placed<i class="fas fa-arrow-down"></i></a></li>
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">My Cart<i class="fas fa-arrow-down"></i></a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Choose Lab<i class="fas fa-arrow-down"></i></a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Rentals Return<i class="fas fa-arrow-down"></i></a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Checkout<i class="fas fa-arrow-down"></i></a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Order Placed<i class="fas fa-arrow-down"></i></a></li>
                 </ul>
             </div>
             <div class="order">
@@ -104,9 +105,9 @@
                         </div>
                     </div>
                     <div class="options-box">
-                        <p class="title-options">Turn Around Time:</p>
+                        <p class="title-options">TURN AROUND TIME:</p>
                         <div class="options">
-                            <form class='form-box' action="">
+                            <form class='form-box' action="#">
                                 <label>
                                     <div class="input-box">
                                         <input  class='radio-btn' type="radio" name="option"  value="1200.00$"><p>1 Day</p>
@@ -159,7 +160,7 @@
                         </div>
                     </div>
                     <div class="options-box">
-                        <p class="title-options">Turn Around Time:</p>
+                        <p class="title-options">TURN AROUND TIME:</p>
                         <div class="options">
                             <form class='form-box' action="">
                                 <label>
@@ -214,7 +215,7 @@
                         </div>
                     </div>
                     <div class="options-box">
-                        <p class="title-options">Turn Around Time:</p>
+                        <p class="title-options">TURN AROUND TIME:</p>
                         <div class="options">
                             <form class='form-box' action="">
                                 <label>
@@ -249,9 +250,6 @@
             </div>
         </div>
 
-        
-
-        
     </div>
     <script src="js/script.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
