@@ -70,9 +70,11 @@ checkBoxAccept.addEventListener('click', () => {
 });
 
 formBox.addEventListener('change', () => {
-    checkName(inputName, spanNameError);
-    checkPassword(inputPassword, spanPasswordError);
-    checkSelect(selectCountry, spanCountryError);
+    if (checkBoxAccept.checked) {
+        checkName(inputName, spanNameError);
+        checkPassword(inputPassword, spanPasswordError);
+        checkSelect(selectCountry, spanCountryError);
+    }
 });
 
 togglePasswordText.addEventListener('click', () => {
@@ -82,3 +84,14 @@ togglePasswordText.addEventListener('click', () => {
         inputPassword.type = 'password';
     }
 });
+
+function validationLogin() {
+    this.value = this.value.replace(/\s+/g, ' ');
+}
+
+function validationPassword() {
+    this.value = this.value.trim().replace(/\s+/g, '');
+}
+
+inputName.addEventListener('input', validationLogin);
+inputPassword.addEventListener('input', validationPassword);
