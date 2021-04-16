@@ -4,7 +4,7 @@ const buttonSendForm = document.querySelector('.btn-send-form');
 
 const inputName = document.querySelector('.input-name');
 const inputPassword = document.querySelector('.input-password');
-const togglePasswordText = document.querySelector('.eye-secret-svg');
+const togglePasswordText = document.querySelector('.eye-secret-icon');
 
 const selectCountry = document.querySelector('.input-country');
 const checkBoxAccept = document.querySelector('.checkbox-accept');
