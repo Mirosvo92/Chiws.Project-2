@@ -282,7 +282,7 @@
   border: 1px solid #868686;
 }
 
-.form-wrapper .form-create-account .form-body .input-box .mail-svg {
+.form-wrapper .form-create-account .form-body .input-box .mail-icon {
   position: absolute;
   content: url(../img/form-create-account-SVG/form_email.svg);
   width: 18px;
@@ -294,7 +294,7 @@
   transform: translateY(-50%);
 }
 
-.form-wrapper .form-create-account .form-body .input-box .lock-svg {
+.form-wrapper .form-create-account .form-body .input-box .lock-icon {
   position: absolute;
   content: url(../img/form-create-account-SVG/form_padlock.svg);
   width: 18px;
@@ -306,7 +306,7 @@
   transform: translateY(-50%);
 }
 
-.form-wrapper .form-create-account .form-body .input-box .eye-secret-svg {
+.form-wrapper .form-create-account .form-body .input-box .eye-secret-icon {
   position: absolute;
   content: url(../img/form-create-account-SVG/form_eye.svg);
   width: 20px;

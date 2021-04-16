@@ -56,9 +56,6 @@ const checkSelect = (select, spanError) => {
     }
 };
 
-// onsubmit
-// событие change
-
 buttonSendForm.addEventListener('click', () => {
     checkName(inputName, spanNameError);
     checkPassword(inputPassword, spanPasswordError);
